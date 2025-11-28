@@ -3,29 +3,33 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Message for You Bro</title>
+<title>Message for You</title>
 <style>
+  * {
+    box-sizing: border-box;
+  }
+
   body {
     margin: 0;
+    padding: 20px;
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
     color: #fff;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .card {
-    width: 90%;
+    width: 100%;
     max-width: 480px;
     background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(12px);
-    padding: 30px;
+    padding: 25px;
     border-radius: 18px;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
     animation: fadeIn 1.2s ease;
   }
 
@@ -35,7 +39,7 @@
   }
 
   h2 {
-    font-size: 26px;
+    font-size: 24px;
     margin-bottom: 10px;
   }
 
@@ -46,19 +50,26 @@
   }
 
   .btn {
-    margin-top: 18px;
+    margin-top: 20px;
     padding: 12px 20px;
+    width: 100%;
     background: #7c3aed;
     border: none;
     border-radius: 12px;
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
   }
 
   .btn:hover {
     background: #9f5bff;
+  }
+
+  @media (max-width: 400px) {
+    h2 { font-size: 22px; }
+    p { font-size: 15px; }
+    .btn { font-size: 15px; }
   }
 </style>
 </head>
@@ -73,18 +84,20 @@
     It would mean a lot to me ❤️😭🔥
   </p>
   <p style="margin-top:12px;font-size:14px;opacity:0.7;">– Aakash</p>
-  <button class="btn" onclick="copyMsg()">Copy Message</button>
+
+  <button class="btn" onclick="copyMsg()">I’ll do it 😎</button>
 </div>
 
 <script>
 function copyMsg() {
-  const msg = `Heyy please save me 😭🔥\nIt's me, Aakash 😎🔥
+  const msg = `Heyy please save me 😭🔥
+It's me, Aakash 😎🔥
 I need the Research Methodology assignment answers.
 Send me the solution/outline when you're free, thank you so much ❤️🔥`;
 
   navigator.clipboard.writeText(msg)
-    .then(() => alert('Message copied bro! Send it 🤝🔥'))
-    .catch(() => alert('Copy failed — copy manually bro.'));
+    .then(() => alert('Message copied! Send it 😎🔥'))
+    .catch(() => alert('Copy failed — copy manually.'));
 }
 </script>
 
