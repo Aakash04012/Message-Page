@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Message for You Bro</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f, #1b1b1b);
+    color: #fff;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    animation: fadeIn 1.2s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  .btn {
+    margin-top: 18px;
+    padding: 12px 20px;
+    background: #7c3aed;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #9f5bff;
+  }
+</style>
+</head>
+<body>
+
+<div class="card" id="messageBox">
+  <h2>Hey There 👋</h2>
+  <p>
+    I know you're someone I can genuinely rely on 😭🔥<br><br>
+    Can you help me out with the <b>Research Methodology assignment</b>?<br>
+    Just send me the solutions or outline when you get time, okay? 😊 <br>
+    It would mean a lot to me ❤️😭🔥
+  </p>
+  <p style="margin-top:12px;font-size:14px;opacity:0.7;">– Aakash</p>
+  <button class="btn" onclick="copyMsg()">Copy Message</button>
+</div>
+
+<script>
+function copyMsg() {
+  const msg = `Heyy please save me 😭🔥\nIt's me, Aakash 😎🔥
+I need the Research Methodology assignment answers.
+Send me the solution/outline when you're free, thank you so much ❤️🔥`;
+
+  navigator.clipboard.writeText(msg)
+    .then(() => alert('Message copied bro! Send it 🤝🔥'))
+    .catch(() => alert('Copy failed — copy manually bro.'));
+}
+</script>
+
+</body>
+</html>
